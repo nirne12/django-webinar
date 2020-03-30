@@ -1,0 +1,22 @@
+<table>
+<tr>
+    <th>S No.</th>
+    <th>Name</th>
+    <th>Roll Number</th>
+    <th>Title</th>
+    <th>Description</th>
+</tr>
+
+{% for complaint in object_list %}
+
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td> {{ complaint.Name }}</td>
+            <td>{{ complaint.RollNumber }}</td>
+            <td> {{ complaint.Title }}</td>
+            <td>{{ complaint.Description }}</td>
+        </tr>
+
+{% endfor %}
+</table>
+
