@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from hello.views import hello_world
+from complaint.views import create_complaint
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', hello_world)
+    path('hello/', hello_world),
+    path('complaint/create',create_complaint)
 ]
