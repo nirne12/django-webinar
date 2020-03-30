@@ -10,5 +10,6 @@ class Complaint(models.Model):
     Date = models.DateField()
 
     def __str__(self):
-        return self.Title
+        return self.Title + " " + '( ' +  self.Name + ' )'
+
 

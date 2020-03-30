@@ -1,4 +1,4 @@
-"""mysite URL Configuration
+"""complaint URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from hello.views import hello_world
-from complaint.views import create_complaint
+from complaint.views import CreateComplaintView,ListComplaintView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', hello_world),
-    path('complaint/create',create_complaint)
+    path('complaint/create', CreateComplaintView.as_view()),
+    path('complaint/list', ListComplaintView.as_view())
 ]
